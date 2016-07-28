@@ -1,6 +1,5 @@
 //Require, indica onde possui mais dados sobre configuração
 var db = require('../db_config.js');
-var ip = require('ip');
 
 //Listar todos os serviços disponíveis que estão no banco de dados
 exports.list = function(callback){
@@ -36,10 +35,10 @@ exports.searchService = function(service, callback){
 };
 
 //Salva o que vocês fez no POST no banco de dados
-exports.save = function(service, link, callback){
+exports.save = function(service, ip, link, callback){
 	new db.Data({
 		'service': service,
-		'ip': ip.address(), //Ver se esssa é a forma certa de pegar o IP
+		'ip': ip,
 		'link': link,
 		'created_at': new Date()
 	}).save(function(error, data) {

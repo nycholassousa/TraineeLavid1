@@ -1,8 +1,8 @@
 //Informações para conexão do banco de dados
-var db_string		= 'mongodb://127.0.0.1/mongo5';
+var db_string		= 'mongodb://127.0.0.1/mongodatabase1';
 var mongoose 		= require('mongoose').connect(db_string);
 var db 				= mongoose.connection;
-var autoIncrement 	= require('mongoose-auto-increment');
+var autoIncrement 	= require('mongoose-auto-increment'); //module de autoincrement pro mongoose
 autoIncrement.initialize(mongoose);
 
 //Caso o banco de dados dê algum erro:

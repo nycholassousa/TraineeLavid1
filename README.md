@@ -41,10 +41,3 @@ GET retornando um serviço específico através do ID
 GET retornando um tipo específico de serviço (bônus)
 
 	http://ip:porta/services/:service
-
-## O que faltou
-Verificação se o arquivo é realmente do tipo que estou dizendo (verificação através da extensão);
-
-Corrigir erro de mesmo quando ocorre erro no POST, o arquivo ainda é enviado;
-
-O nome do arquivo em /uploads/ deve ser o ID da inserção dele, assim como o link para encontra-lo;
